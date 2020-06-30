@@ -54,7 +54,7 @@ namespace LibGit2Sharp.Tests
         }
 
         [SkippableTheory]
-        [InlineData("x86")]
+        //[InlineData("x86")]
         [InlineData("x64")]
         public void LoadFromSpecifiedPath(string architecture)
         {
