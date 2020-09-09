@@ -28,7 +28,7 @@ jobs:
       # Build project using powershell script
       run: |
         dotnet build -c Release
-        nuget pack .\nuget.package\Mendix_package.nuspec  -Version $PACKAGE_VER -NoPackageAnalysis
+        nuget pack .\nuget.package\Mendix_package.nuspec  -Version 1.0.1-mx -NoPackageAnalysis
         nuget source Add -Name "GitHub" -Source "https://nuget.pkg.github.com/MarcellvanRooyen/index.json" -UserName MarcellVanRooyen -Password ${{ secrets.GHPACKAGESTOKEN }}
         nuget push **/*.nupkg -Source "GitHub" -SkipDuplicate
     
