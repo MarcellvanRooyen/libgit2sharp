@@ -30,6 +30,6 @@ jobs:
         dotnet build -c Release
         nuget pack .\nuget.package\Mendix_package.nuspec  -Version 1.0.2-mx -NoPackageAnalysis
         nuget source Add -Name "GitHub" -Source "https://nuget.pkg.github.com/MarcellvanRooyen/index.json" -UserName MarcellVanRooyen -Password ${{ secrets.GHPACKAGESTOKEN }}
-        nuget push **/*.nupkg -Source "GitHub" -SkipDuplicate
+        nuget push **/Mendix.LibGit2Sharp*.nupkg -Source "GitHub" -SkipDuplicate
     
      
