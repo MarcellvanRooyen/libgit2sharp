@@ -18,8 +18,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
+      with:
+        fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
     - name: Update Gitversioning
       run:
         dotnet tool install --tool-path . nbgv
