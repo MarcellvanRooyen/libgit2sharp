@@ -21,7 +21,7 @@ jobs:
       with:
         fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
     - name: Update Gitversioning
-      run:
+      run: |
         dotnet tool install --tool-path . nbgv
         .\nbgv cloud
     - name: Build & Deploy Package
